@@ -1,1 +1,1 @@
-web: gunicorn 'cash_specification.wsgi'
+web: gunicorn cash_specification.wsgi
