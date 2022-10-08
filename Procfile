@@ -1,0 +1,1 @@
+web: gunicorn 'cash_specification.wsgi'

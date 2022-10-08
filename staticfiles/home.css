@@ -1,0 +1,65 @@
+table {
+}
+
+.my-container{
+margin-left: 250px;
+margin-right: 250px;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.bdr {
+  
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.table-hover tbody tr:hover td {
+    background: aqua;
+}
+
+.table-hover tbody tr:hover th {
+    background: aqua;
+}
+
+.table tbody tr{
+border-bottom: solid 1px;
+}
+
+.table tbody  .last-row{
+border-bottom: solid 0px;
+}
+
+.table thead tr th {
+text-align: center;
+border-left: solid 1px;
+}
+
+.table thead  .first-th{
+border-left: solid 0px;
+}
+
+.table tbody tr td{
+text-align: center;
+border-left: solid  #adad85 1px;
+
+}
+.table tbody tr th {
+text-align: center;
+}
+
+.table tbody tr td input {
+width: 50%;
+}
+.table tbody tr tdinput::-webkit-outer-spin-button,
+.table tbody tr tdinput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+h1 {
+ text-align: center;
+}
+
