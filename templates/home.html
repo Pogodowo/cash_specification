@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content%}
+<h1 >Specyfikacja nominałowa</h1>
+<div class="my-container">
+<!--  <div class="container mt-2 mb-2 ml-2 mr-2 ">-->
+
+<table class="table table-borderless table-striped  bdr" >
+  <thead style="border-bottom: 1px solid black; background-color: #00b33c ;" >
+    <tr>
+      <th style="width: 10%;" class="first-th" scope="col">Nominał</th>
+      <th style="width: 10%;"scope="col">Ilość sztuk</th>
+      <th scope="col">Suma wartości</th>
+      <th  scope="col">Suma wartości słownie</th>
+    </tr>
+  </thead>
+  <tbody >
+  {% csrf_token %}
+    <tr  style="border-bottom: 1px solid black;">
+      <th scope="row">500zł</th>
+      <td  ><input class="calc-input" id="input-500" name="input-500" onfocus="this.select();" ></td>
+      <td id="sum-500">-</td>
+      <td id="sumtext-500">-</td>
+    </tr>
+    <tr id="test">
+      <th scope="row">200zł</th>
+      <td ><input class="calc-input" id="input-200" onfocus="this.select();"></td>
+      <td id="sum-200">-</td>
+      <td id="sumtext-200">-</td>
+    </tr>
+    <tr>
+      <th scope="row">100zł</th>
+      <td><input class="calc-input" id="input-100" onfocus="this.select();"   ></td>
+      <td id="sum-100">-</td>
+      <td id="sumtext-100">-</td>
+    </tr>
+    <tr>
+      <th scope="row">50zł</th>
+      <td><input class="calc-input" id="input-50" onClick="this.select();" ></td>
+      <td id="sum-50">-</td>
+      <td id="sumtext-50">-</td>
+    </tr>
+    <tr>
+      <th scope="row">20zł</th>
+      <td><input class="calc-input" id="input-20" onClick="this.select();"></td>
+      <td id="sum-20">-</td>
+      <td id="sumtext-20">-</td>
+    </tr>
+    <tr>
+      <th scope="row">10zł</th>
+      <td><input class="calc-input" id="input-10" onClick="this.select();"  ></td>
+      <td id="sum-10">-</td>
+      <td id="sumtext-10">-</td>
+    </tr>
+    <tr>
+      <th scope="row">5zł</th>
+      <td><input class="calc-input" id="input-5" onClick="this.select();"></td>
+      <td id="sum-5">-</td>
+      <td id="sumtext-5">-</td>
+    </tr>
+    <tr>
+      <th scope="row">2zł</th>
+      <td><input class="calc-input" id="input-2" onClick="this.select();"  ></td>
+      <td id="sum-2">-</td>
+      <td id="sumtext-2">-</td>
+    </tr>
+    <tr>
+      <th scope="row">1zł</th>
+      <td><input class="calc-input" id="input-1"  onClick="this.select();" ></td>
+      <td id="sum-1">-</td>
+      <td id="sumtext-1">-</td>
+    </tr>
+    <tr>
+      <th scope="row">0.5zł</th>
+      <td><input class="calc-input" id="input-0.5" onClick="this.select();"  ></td>
+      <td id="sum-0.5">-</td>
+      <td id="sumtext-0.5">-</td>
+    </tr>
+    <tr>
+      <th scope="row">0.2zł</th>
+      <td><input class="calc-input" id="input-0.2" onClick="this.select();" ></td>
+      <td id="sum-0.2" >-</td>
+      <td id="sumtext-0.2">-</td>
+    </tr>
+    <tr>
+      <th scope="row">0.1zł</th>
+      <td><input class="calc-input" id="input-0.1" onClick="this.select();"  ></td>
+      <td id="sum-0.1" >-</td>
+      <td id="sumtext-0.1">-</td>
+    </tr>
+    <tr>
+      <th scope="row">0.05zł</th>
+      <td><input class="calc-input" id="input-0.05" onClick="this.select();"  ></td>
+      <td id="sum-0.05" >-</td>
+      <td id="sumtext-0.05">-</td>
+    </tr>
+    <tr>
+      <th scope="row">0.02zł</th>
+      <td><input class="calc-input" id="input-0.02" onClick="this.select();" ></td>
+      <td class="sum-nominal" id="sum-0.02"></td>
+      <td id="sumtext-0.02">-</td>
+    </tr>
+    <tr class="last-row" >
+      <th scope="row">0.01zł</th>
+      <td><input class="calc-input" id="input-0.01" onClick="this.select();" ></td>
+      <td class="sum-nominal" id="sum-0.01" ></td>
+      <td id="sumtext-0.01">-</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+  <table>
+    <thead  >
+    <tr>
+      <th style="width:500px; padding-left: 40px;"  scope="col"><button id="submit-button"type='submit' class="btn btn-success">Konwersja do pdf</button> <a  id="clear-button" class="btn btn-primary">Wyczyść tablicę</a> </th>
+      <th style="width: 150px; font-size: 24px;" scope="col" > Łącznie: </th>
+      <th style="width: 150px; font-size: 24px" scope="col" id="suma" ></th>
+      <th  style="width: 500px; font-size: 24px" scope="col" id="sumtext"></th>
+    </tr>
+  </table>
+
+
+</div>
+{% endblock %}
+
+</body>
+</html>
