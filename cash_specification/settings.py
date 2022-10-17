@@ -27,7 +27,7 @@ SECRET_KEY = str(os.environ.get('SECRET_KEY'))
 DEBUG = str(os.environ.get('DEBUG'))
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
 
 # Application definition
 
