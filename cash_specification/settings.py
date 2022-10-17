@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'specification',
     'to_pdf',
-    'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
 ]
 
